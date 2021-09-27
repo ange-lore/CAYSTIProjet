@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Urbanist:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Cormorant+Garamond:wght@300 & family= Nanum+Gothic & display=swap');
+body{
+    width:100vw;
+    height:auto;
+    margin:0;
+    background:#f2f6fe;
+    position:relative;
+
+}
+
+main{
+    display:grid;
+    grid-template-columns:1fr 7fr;
+
+}
+.main{
+    display:grid;
+
+      padding:120px 20px;
+}
+.items{
+    display:grid;
+}
+.items_1{
+    display:grid;
+    grid-template-columns:3fr 1fr;
+}
+.items_2{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+.item{
+    background: #f2f6fe !important;
+    height:200px;
+    width:200px;
+
+}
+h1,h2,h3,h4,h5{
+        font-family: 'Urbanist', sans-serif;
+}
+.sidebar{
+    padding:80px 10px 0;
+    background:#e0e0e0;
+}
+.main{
+    background:#eee;
+    grid-gap:20px;
+    padding-top: 0px;
+    margin-top: 50px;
+}
+.logo{
+    background:white;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+    position:absolute;
+    top:0;
+    left:0;
+    width:300px;
+}
+.app_name{
+    font-weight:bold;
+    font-size:1.2rem;
+    font-family: 'Urbanist', sans-serif;
+}
+button.icon{
+    background:#eee;
+    border:none;
+    cursor:pointer;
+    margin:0 0 0 20px;
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+}
+.menu_name{
+font-family: 'Raleway', sans-serif;
+font-size:0.9rem;
+padding: 10px 0 0;
+color:#929eb7;
+}
+.menu_items{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows:repeat(5,1fr);
+    grid-gap:25px;
+
+}
+ul.menu_items li{
+    list-style:none;
+    padding:5px;
+}
+ul{
+margin:0;
+padding:0;
+}
+a{
+text-decoration:none;
+
+}
+.menu_item a{
+display:flex;
+flex-direction:column;
+justify-content:center;
+    align-items:center;
+    padding:10px;
+}
+.menu_item a div{
+    display:flex;
+    justify-content:center;
+    text-align:center;
+}
+.menu_item div:first-child{
+    background:#eceff7;
+    padding:5px;
+    width:35px;
+    height:25px;
+   border-radius: 5px;
+background: #e0e0e0;
+box-shadow:  6px -6px 12px #cecece,
+             -6px 6px 12px #f2f2f2;
+}
+a:hover{
+    background:#eceff7;
+    color:white;
+}
+html, body, #container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}

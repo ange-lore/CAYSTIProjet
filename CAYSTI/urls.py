@@ -22,9 +22,20 @@ from patientsApp import views as patientsAppviews
 urlpatterns = [
     path('blog/', include('blog.url')),
     path('admin/', admin.site.urls),
-    path('acceuil/', views.home),
-    path('page/', views.about),
-    path('choix/<int:choix>', views.afficher, name="afficher"),
-    path('patientsApp/', patientsAppviews.register_patient),
-    path('login/',patientsAppviews.sign_in),
+    path('', views.home),
+    path('page/', views.vaccination, name='vaccination'),
+    path('presentation/', views.presentation, name= 'presentation'),
+    path('symptômes/', views.symptomes, name='symptomes'),
+    path('transmission/', views.mode_transmission, name='mode_transmission'),
+    path('gestes barrières/', views.geste_barrieres, name='gestes_barrieres'),
+    path('preventions/', views.preventions, name='preventions'),
+    path('vaccination/', views.vaccination, name='vaccination'),
+    path('différents vaccins/', views.differents_vaccins, name='differents_vaccins'),
+    path('statistique/', views.statistiques, name='statistiques'),
+    path('reservation/', views.reservation, name='reservation'),
+    path('page/', views.about, name="home"),
+    path('patientsApp/', patientsAppviews.register_patient, name="sign_up"),
+    path('login/', patientsAppviews.sign_in, name="login"),
+
+
 ]

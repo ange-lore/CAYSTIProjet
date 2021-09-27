@@ -145,6 +145,7 @@ body,
             font-weight: 500;
             line-height: 1;
         }
-        span{
-
+        input.id_is_doctor{
+        margin-left: -99px;
         }
+
