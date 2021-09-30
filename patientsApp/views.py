@@ -5,7 +5,7 @@ from .formulaire import CreateUserForm
 
 #from .formulaire import PatientsForm
 from django.contrib.auth.decorators import login_required
-#from .models import Patients
+from .models import Utilisateur
 from django.contrib.auth.forms import UserCreationForm
 
 """
@@ -33,22 +33,26 @@ def register_patient(request):
 
                 return redirect('login')
 
-    context = {'form': form}
-    return render(request, 'register_patient.html', context)
+
+    #import pdb; pdb.set_trace()
+    return render(request, 'login.html', )
 
 
 def sign_in(request):
+    print("TRUE")
     if request.method == 'POST':
+        print("POST")
         username = request.POST.get('username')
         password = request.POST.get('password')
-
         user = authenticate(request, username=username, password=password)
         if user is not None:
+            print("IS NOT NONE")
             login(request, user)
-            return redirect('/reservation', )
+            #return render(request, 'reservation.html') # redirect 'reservation'
+            return redirect ('reservation')
         else:
-            messages.info(request, 'username OR password is incorrect')
+            print("messages")
+            messages.info(request, "il y'a une erreur dans le nom de l'utilisateur ou le mot de passe")
 
-    context = {}
-    return render(request, 'login.html', context)
+    return render(request, 'login.html')
 

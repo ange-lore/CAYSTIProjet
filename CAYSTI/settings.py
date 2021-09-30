@@ -48,8 +48,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
+AUTHENTICATION_BACKENDS = (
+        'django.contrib.auth.backends.RemoteUserBackend',
+        'django.contrib.auth.backends.ModelBackend',
+)
 ROOT_URLCONF = 'CAYSTI.urls'
 
 TEMPLATES = [
@@ -67,7 +72,7 @@ TEMPLATES = [
         },
     },
 ]
-
+AUTH_USER_MODEL = 'patientsApp.Utilisateur'
 WSGI_APPLICATION = 'CAYSTI.wsgi.application'
 
 # Database

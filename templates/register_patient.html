@@ -14,13 +14,13 @@
 			margin: 0;
 			padding: 0;
 			height: 100%;
-			background: #7abecc !important;
+			background: #54c1fb !important;
 		}
 		.user_card {
 			width: 350px;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: #74cfbf;
+			background: white;
 			position: relative;
 			display: flex;
 			justify-content: center;
@@ -38,11 +38,11 @@
 		}
 
 		#form-title{
-			color: #fff;
+			color:#54c1fb;
 		}
 		.login_btn {
 			width: 100%;
-			background: #33ccff !important;
+			background: #54c1fb !important;
 			color: white !important;
 		}
 		.login_btn:focus {
@@ -53,7 +53,7 @@
 			padding: 0 2rem;
 		}
 		.input-group-text {
-			background: #f7ba5b !important;
+			background: #54c1fb !important;
 			color: white !important;
 			border: 0 !important;
 			border-radius: 0.25rem 0 0 0.25rem !important;
@@ -63,7 +63,26 @@
 			box-shadow: none !important;
 			outline: 0px !important;
 		}
+		#id_sex{
+            display: flex;
+            margin-left: -1px;
+            box-sizing: border-box;
+     		padding: 6px 12px;
+            line-height: 1;
+            width: 201px;
+			border-radius: 3px;
+			color: #495057 !important;
+			border: 1px solid #ced4da !important;
 
+			}
+		 .input-group-append#id_email{
+            display: flex;
+            margin-left: -1px;
+            box-sizing: border-box;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1;
+        }
 	</style>
 
 </head>
@@ -90,6 +109,35 @@
 							</div>
 							{{form.email}}
 						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-phone"></i></span>
+							</div>
+							{{form.phone}}
+						</div>
+						 <div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-address-card"></i></span>
+							</div>
+                            {{form.address}}
+                        </div>
+						 <div class="input-group mb-2"style="background-color: white; border-radius: 3px;    line-height: 2.3qu;" >
+							<div class="input-group-append" style="font-size: 1.4rem;font-weight: 500; line-height: 1;display: flex;
+																	margin-left: -1px;
+																	box-sizing: border-box;">
+								<span class="input-group-text"><i class="fas fa-venus-mars" ></i></span>
+							</div>
+							<div style="cursor: pointer;color: white;font-size: 1rem; flex-grow: 1; ">
+                            {{form.sex}}
+							</div>
+                        </div>
+
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text" style=""><i class="fa fa-calendar" aria-hidden="true"></i></span>
+							</div>
+                            {{form.birth_date}}
+                        </div>
 						<div class="input-group mb-2">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
@@ -131,8 +179,11 @@
 		var form_fields = document.getElementsByTagName('input')
 		form_fields[1].placeholder='Username..';
 		form_fields[2].placeholder='Email..';
-		form_fields[3].placeholder='Enter password...';
-		form_fields[4].placeholder='Re-enter Password...';
+		form_fields[3].placeholder='Phone..';
+		form_fields[4].placeholder='Address..';
+		form_fields[5].placeholder='Birth_date..';
+		form_fields[6].placeholder='Enter password...';
+		form_fields[7].placeholder='Re-enter Password...';
 
 
 		for (var field in form_fields){	

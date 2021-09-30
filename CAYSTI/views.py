@@ -67,12 +67,17 @@ def reservation(request):
     # filter from patient model with user id
     # Patient.objects.get(pk=id)
 
+    if not request.user.id:
+        return render(request, 'login.html')
+    return render(request, 'reservation.html', {"hospitals": hospital})
+
+
     #import pdb;pdb.set_trace()
-    geolocator = Nominatim(user_agent="caysti")
-    location = geolocator.geocode("bastos")
+   # geolocator = Nominatim(user_agent="caysti")
+   # location = geolocator.geocode("bastos")
     #import pdb;pdb.set_trace()
 
-    return render(request, 'reservation.html', {"hospitals": hospital,})
+
 def presentation(request):
     return render(request, 'presentation.html')
 def symptomes(request):
